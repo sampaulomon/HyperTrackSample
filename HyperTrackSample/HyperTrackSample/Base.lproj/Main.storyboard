@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vaw-pe-z29">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--GatewayVC-->
+        <scene sceneID="88r-4p-D4r">
+            <objects>
+                <viewController id="vaw-pe-z29" customClass="GatewayVC" customModule="HyperTrackSample" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AgW-vE-OsK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="u5c-73-qNR">
+                                <rect key="frame" x="89" y="236.5" width="197.5" height="194"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sam Solomon" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gMV-mC-5Sw">
+                                        <rect key="frame" x="0.0" y="0.0" width="197.5" height="36"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9663355693" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-Jz-Ix6">
+                                        <rect key="frame" x="0.0" y="76" width="197.5" height="36"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0n-mt-KwL">
+                                        <rect key="frame" x="0.0" y="152" width="197.5" height="42"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="action:" destination="vaw-pe-z29" eventType="touchUpInside" id="zy8-M7-j9N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u5c-73-qNR" firstAttribute="centerX" secondItem="AgW-vE-OsK" secondAttribute="centerX" id="h2t-jk-6Eq"/>
+                            <constraint firstItem="u5c-73-qNR" firstAttribute="centerY" secondItem="AgW-vE-OsK" secondAttribute="centerY" id="u73-Qb-EM8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wKX-8Q-B4c"/>
+                    </view>
+                    <connections>
+                        <outlet property="action" destination="a0n-mt-KwL" id="Hi5-4O-CTp"/>
+                        <outlet property="nameTextField" destination="gMV-mC-5Sw" id="xF4-zW-hJA"/>
+                        <outlet property="phoneNumberTextField" destination="WmM-Jz-Ix6" id="ZCl-nl-xCA"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="MapView" id="Bk8-Or-8fg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLK-vb-Qng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170" y="80"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HyperTrackSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZpG-fs-ldt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yw-ZD-aVH">
+                                <rect key="frame" x="30" y="577" width="315" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="YmF-h5-SP0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="START TRACKING">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="trackActionClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohM-ZR-zmV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZpG-fs-ldt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KaX-mB-56I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2yw-ZD-aVH" secondAttribute="trailing" constant="30" id="P2N-46-xEJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZpG-fs-ldt" secondAttribute="bottom" id="Tpm-6r-FtK"/>
+                            <constraint firstItem="ZpG-fs-ldt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X3K-Gj-o5f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2yw-ZD-aVH" secondAttribute="bottom" constant="30" id="mvC-5s-vHj"/>
+                            <constraint firstItem="ZpG-fs-ldt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oUf-Z7-YeK"/>
+                            <constraint firstItem="2yw-ZD-aVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="oil-8L-wks"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ZpG-fs-ldt" id="UkI-PX-NgP"/>
+                        <outlet property="trackAction" destination="2yw-ZD-aVH" id="kNO-Gc-2yS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949.5999999999999" y="79.610194902548727"/>
+        </scene>
+    </scenes>
+</document>
